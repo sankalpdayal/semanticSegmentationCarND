@@ -158,7 +158,8 @@ def run():
 
         # TF placeholders
         correct_label = tf.placeholder(tf.int32, [None, None, None, num_classes], name='correct_label')
-        
+        learning_rate = tf.placeholder(tf.float32, name='learning_rate')
+		
         # Path to vgg model
         vgg_path = os.path.join(data_dir, 'vgg')
         # Create function to get batches
